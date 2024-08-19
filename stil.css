@@ -1,0 +1,363 @@
+/* Общие стили */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Навигация */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo img {
+    max-width: 150px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff5722;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    background-color: #ffebee;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+header .content {
+    max-width: 600px;
+    flex: 1 1 50%;
+}
+
+header .content h4 {
+    color: #666;
+    font-size: 1.5rem;
+}
+
+header .content h1 {
+    color: #333;
+    margin: 1rem 0;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+header .content h1 span {
+    color: #ff5722;
+}
+
+header .content p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+header .imaig img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Заголовки */
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: 600;
+    color: #333;
+}
+
+form input, form select, form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #ff5722;
+    background-color: #f9f9f9;
+}
+
+form button {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff5722;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+}
+
+/* Секция тендеров */
+.section-tenders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.tender-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tender-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tender-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.tender-card h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.tender-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.tender-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Горизонтальный список категорий */
+.categories-section {
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.horizontal-categories {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-categories li {
+    display: inline-block;
+    scroll-snap-align: start;
+}
+
+.category-btn {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background-color: #ff5722;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Поисковая строка */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .section-tenders {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo img {
+        max-width: 100px;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    header .content h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .category-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .tender-card {
+        padding: 1rem;
+    }
+
+    .tender-card h4 {
+        font-size: 1.25rem;
+    }
+}
+.foff {
+    display: flex;
+    justify-content: center;  /* Центрирование по горизонтали */
+    align-items: center;       /* Центрирование по вертикали */
+    text-align: center;        /* Центрирование текста */
+}
